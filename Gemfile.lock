@@ -131,6 +131,9 @@ GEM
       bundler (>= 1.15.0)
       railties (= 6.1.4.4)
       sprockets-rails (>= 2.0.0)
+    rails-api (0.4.1)
+      actionpack (>= 3.2.11)
+      railties (>= 3.2.11)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -213,6 +216,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.4, >= 6.1.4.4)
+  rails-api
   sass-rails (>= 6)
   selenium-webdriver
   spring
