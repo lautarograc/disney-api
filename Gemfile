@@ -2,13 +2,18 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.0'
-
+gem 'http', '~> 5.0', '>= 5.0.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.4'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+
+gem 'pg', '~> 1.3', '>= 1.3.1'
+
 # Use Puma as the app server
+
+gem 'friendly_id', '~> 5.4.0'
+
 gem 'puma', '~> 5.0'
+gem 'pg_search', '~> 2.3', '>= 2.3.6'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker

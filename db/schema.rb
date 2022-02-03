@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2022_01_31_194541) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
@@ -26,11 +29,13 @@ ActiveRecord::Schema.define(version: 2022_01_31_194541) do
     t.text "lore"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "slug"
+    t.index ["slug"], name: "index_characters_on_slug", unique: true
   end
 
   create_table "characters_movies", id: false, force: :cascade do |t|
-    t.integer "character_id", null: false
-    t.integer "movie_id", null: false
+    t.bigint "character_id", null: false
+    t.bigint "movie_id", null: false
   end
 
   create_table "movies", force: :cascade do |t|
@@ -39,7 +44,7 @@ ActiveRecord::Schema.define(version: 2022_01_31_194541) do
     t.float "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "category_id"
+    t.bigint "category_id"
     t.index ["category_id"], name: "index_movies_on_category_id"
   end
 
