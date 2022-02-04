@@ -1,20 +1,32 @@
 class Api::V1::CharactersController < ApplicationController
-    before_action :set_character, only: %i[ show edit update destroy ]
+    before_action :set_character, only: %i[ search show edit update destroy ]
     def show
     @character = Character.find(params[:id])
+
+    
     respond_to do |format|
         format.html
         format.json { render json: @character }
     end
+
 end
 
 
     def index
-        @character = Character.all
+        if request.query_parameters[:name].present?
+        @character = Character.where("name = ?", params[:name])
+        elsif request.query_parameters[:age].present?
+        @character = Character.where("age = ?", params[:age])
+
+            else
+            @character = Character.all
+
+    end
         render json: @character.as_json(
             only: [:id, :name]
         )
     end
+
     def create
         @character = Character.create(
             name: params[:name],
