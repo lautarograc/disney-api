@@ -15,8 +15,8 @@ However, as this api has been done with less than 30 total hours of development,
 
 
 |                            WIP                               |
+                                     -                 -  -|
 | Immediate future                                 |Short term |
-| -----------                                      |----------- |
 | Photos URL table for movies and characters       | Heroku or Capistrano deployment|
 | Fixing movie-character many-to-many relation     | Front-end        |
 |                                                  | Tests            |
