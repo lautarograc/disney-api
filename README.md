@@ -14,9 +14,8 @@ This api contains a fully functional auth system based in JWP tokens and all the
 However, as this api has been done with less than 30 total hours of development, it's lacking several important functions, so I'll be making pull requests and updating to this project fairly often until I can finally dash off every missing element from the WIP list.
 
 
-|                            WIP                               |
-|       ----                   |                ----           |
 | Immediate future                                 |Short term |
+| ------------------------------------------------ |-----------|
 | Photos URL table for movies and characters       | Heroku or Capistrano deployment|
 | Fixing movie-character many-to-many relation     | Front-end        |
 |                                                  | Tests            |
