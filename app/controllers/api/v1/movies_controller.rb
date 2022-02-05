@@ -1,5 +1,6 @@
 class Api::V1::MoviesController < ApplicationController
-def show
+    before_action :authenticate_request
+    def show
     @movie = Movie.find(params[:id])
     respond_to do |format|
         format.html

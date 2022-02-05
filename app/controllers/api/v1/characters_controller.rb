@@ -1,4 +1,5 @@
 class Api::V1::CharactersController < ApplicationController
+    before_action :authenticate_request
     before_action :set_character, only: %i[ search show edit update destroy ]
     def show
     @character = Character.find(params[:id])
@@ -57,5 +58,7 @@ def update
 
 def character_params
     params.require(:character).permit(:name, :age, :height, :weight, :lore)
-   end    
+   end
+
+
 end
