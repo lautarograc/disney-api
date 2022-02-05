@@ -13,6 +13,8 @@ To begin using the API, first run rails s to start the instance of the api. You 
 This api contains a fully functional auth system based in JWP tokens and all the present endpoints are working. It also contains search functions for characters.
 However, as this api has been done with less than 30 total hours of development, it's lacking several important functions, so I'll be making pull requests and updating to this project fairly often until I can finally dash off every missing element from the WIP list.
 
+
+|                            WIP                               |
 | Immediate future                                 |Short term |
 | -----------                                      |----------- |
 | Photos URL table for movies and characters       | Heroku or Capistrano deployment|
