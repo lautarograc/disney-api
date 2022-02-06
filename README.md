@@ -11,7 +11,8 @@ Run the standard commands to import gems (bundle install) and to create and migr
 
 To begin using the API, first run rails s to start the instance of the api. You can test it through cURL or your favourite system by following the instructions provided by my [POSTMAN docs](https://documenter.getpostman.com/view/19395140/UVeGqkme). Take in consideration that I'm fairly new to producing documentation, so some portions of it may be redundant or not informative enough. I'm working to improve the quality of the docs.
 
-The standard cURL command should look something like this:
+
+For example, to create a category of movies dedicated to princesses, your cURL command should look something like this:
 
 ```console
 curl --location  -H "Authorization: Bearer {TOKEN}" --request POST 'localhost:3000/api/v1/categories' --header 'Content-Type: application/json' --data-raw '{"name":"Princesses"}'
