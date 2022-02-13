@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
     skip_before_action :authenticate_request
+
     def show
         user = User.find(params[:id])
         render json: user
@@ -12,6 +13,7 @@ class UsersController < ApplicationController
             token = JsonWebToken.encode(user_id: user.id)
 
             render json: {user: user, token: token}
+            UserMailer.with(user: user).welcome_email.deliver_later
         else
             render json: {errors: user.errors.full_messages}
         end
