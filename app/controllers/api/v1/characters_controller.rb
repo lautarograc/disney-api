@@ -29,13 +29,7 @@ end
     end
 
     def create
-        @character = Character.create(
-            name: params[:name],
-            age: params[:age],
-            height: params[:height],
-            weight: params[:weight],
-            lore: params[:lore]
-        )
+        @character = Character.create(character_params
         render json: @character
     end
 
